@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/csrc/quantize/include",
+                "/root/miniconda3/envs/nlp/lib/python3.11/site-packages/torch/include",
+                "/root/miniconda3/envs/nlp/lib/python3.11/site-packages/torch/include/torch/csrc/api/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x86",
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "browse": {
+                "path": [
+                    "/root/miniconda3/envs/nlp/lib/python3.11/site-packages/torch/include",
+                    "/root/miniconda3/envs/nlp/lib/python3.11/site-packages/torch/include/torch/csrc/api/include"
+                ]
+            }
+        }
+    ],
+    "version": 4
+}
