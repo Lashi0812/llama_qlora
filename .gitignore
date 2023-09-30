@@ -2,3 +2,4 @@
 build/
 playground/
 dist/
+*__pycache__*
