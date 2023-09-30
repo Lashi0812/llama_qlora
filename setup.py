@@ -75,9 +75,10 @@ setup(
         CUDAExtension(
             name ='quantize', 
             sources = [
-            'csrc/quantize/quantize.cpp',
+            'csrc/quantize/ops.cu',
             'csrc/quantize/src/quantize.cu'],
-            include_dirs=["csrc/quantize/include"]
+            include_dirs=["csrc/quantize/include"],
+            extra_compile_args={"nvcc":["-Xcompiler", "-fPIC","-g","-G"]}
         )
     ],
     cmdclass={

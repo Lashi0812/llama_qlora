@@ -32,7 +32,9 @@
     ],
     "runArgs": ["--env-file",".devcontainer/devcontainer.env"
     // ,"--runtime=nvidia" // nvidia-container-toolkit
-    ,"--gpus","all" 
-    
-    ]
+    ,"--gpus","all" ,
+    "--privileged"
+    ],
+    "capAdd": ["SYS_PTRACE"],
+    "securityOpt": [ "seccomp=unconfined" ]
 }

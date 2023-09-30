@@ -1,3 +1,13 @@
 ipykernel
 ipywidgets
-pandas
+pandas 
+transformers
+accelerate
+einops
+evaluate
+scikit-learn
+sentencepiece
+wandb
+bitsandbytes
+peft
+pytest
