@@ -11,3 +11,14 @@ def test_quantizeNF4():
         a,b = bnb_func.quantize_4bit(A=inputs,blocksize=block_size,quant_type="nf4")
         assert out.allclose(a)
         assert quant_state[0].allclose(b[0])
+        
+def test_dequantizeNF4():
+    for _ in range(10):
+        inputs = torch.rand(4096,4096,dtype=torch.bfloat16,device="cuda")
+        block_size = 64
+        quant,quant_state = py_func.quantizeNF4(inputs,block_size)
+        a,b = bnb_func.quantize_4bit(A=inputs,blocksize=block_size,quant_type="nf4")
+        weights = py_func.dequantizeNF4(quant,quant_state)
+        bnb_weights = bnb_func.dequantize_4bit(a,b)
+        assert weights.allclose(bnb_weights)
+        
